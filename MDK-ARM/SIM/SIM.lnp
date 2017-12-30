@@ -1,0 +1,22 @@
+--cpu Cortex-M3
+"sim\system_stm32f1xx.o"
+"sim\startup_stm32f103xb.o"
+"sim\main.o"
+"sim\stm32f1xx_it.o"
+"sim\stm32f1xx_hal_msp.o"
+"sim\stm32f1xx_hal_flash.o"
+"sim\stm32f1xx_hal_flash_ex.o"
+"sim\stm32f1xx_hal.o"
+"sim\stm32f1xx_hal_cortex.o"
+"sim\stm32f1xx_hal_rcc.o"
+"sim\stm32f1xx_hal_rcc_ex.o"
+"sim\stm32f1xx_hal_uart.o"
+"sim\stm32f1xx_hal_tim.o"
+"sim\stm32f1xx_hal_dma.o"
+"sim\stm32f1xx_hal_tim_ex.o"
+"sim\stm32f1xx_hal_gpio.o"
+"sim\stm32f1xx_hal_pwr.o"
+--library_type=microlib --strict --scatter "SIM\SIM.sct"
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "SIM.map" -o SIM\SIM.axf
